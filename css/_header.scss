@@ -1,0 +1,58 @@
+header {
+  flex: 1 1;
+  @include gridCenter;
+
+  figure {
+    width: clamp(150px, 50%, 200px);
+    border: 2px solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    aspect-ratio: 3/3;
+    img {
+      width: 100%;
+    }
+  }
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $blue;
+  }
+  .shareIcons {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    a.social {
+      @extend .socialLinks;
+      text-decoration: none;
+      background-color: $grayLight;
+      color: $blackLight;
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  .btns {
+    text-align: center;
+    button {
+      padding: 8px 15px;
+      background-color: $blue;
+      border: none;
+      border-radius: 5px;
+      color: $white;
+      font-size: 1rem;
+      text-transform: capitalize;
+      margin-top: 20px;
+      &:hover {
+        background-color: $blackLight;
+      }
+    }
+  }
+}

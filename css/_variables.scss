@@ -1,0 +1,32 @@
+// Variables
+$darckBlue: #30336b;
+$blue: #2980B9;
+$white: white;
+$grayLight: #eee;
+$blackLight: #333;
+$gray: #777;
+$boxesPadding: 1.2rem;
+$boxesPaddingWide: 5.5rem 7rem;
+$borderRadius: 6px;
+$gap: .8rem;
+$indent: 1.5rem;
+
+//  Mixins (Functions)
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+@mixin dispFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+.socialLinks {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center; // OR display: grid;
+    line-height: 45px; // OR place-items: center;
+    font-size: 1.2rem;
+}

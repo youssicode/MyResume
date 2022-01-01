@@ -1,0 +1,232 @@
+.socialLinks, article#artContact .contactContainer section i, .container header .shareIcons a.social {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1.2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  background: linear-gradient(to top, #2980B9, #30336b);
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.container header,
+.container main {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 6px;
+}
+.container header {
+  flex: 1 1;
+  display: grid;
+  place-items: center;
+}
+.container header figure {
+  width: clamp(150px, 50%, 200px);
+  border: 2px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  aspect-ratio: 3/3;
+}
+.container header figure img {
+  width: 100%;
+}
+.container header h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.container header p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #2980B9;
+}
+.container header .shareIcons {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+.container header .shareIcons a.social {
+  text-decoration: none;
+  background-color: #eee;
+  color: #333;
+}
+.container header .shareIcons a.social:hover {
+  background-color: #2980B9;
+  color: white;
+}
+.container header .btns {
+  text-align: center;
+}
+.container header .btns button {
+  padding: 8px 15px;
+  background-color: #2980B9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+.container header .btns button:hover {
+  background-color: #333;
+}
+
+.container main {
+  flex: 1 1 832px;
+  color: #777;
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+article h2 {
+  color: #2980B9;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+article#artAbout > p {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  text-transform: lowercase;
+  text-indent: 1.5rem;
+}
+article#artAbout > p::first-letter {
+  text-transform: uppercase;
+}
+article#artAbout section.persoInfos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+article#artAbout section.persoInfos aside {
+  flex: 1 1 320px;
+}
+article#artAbout section.persoInfos aside p {
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+article#artAbout section.persoInfos aside p span {
+  color: #333;
+}
+article#artAbout section.persoInfos aside.p1 p:nth-child(4) span {
+  text-transform: lowercase;
+}
+article#artSkills .secSkills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 130px);
+  gap: 0.8rem;
+}
+article#artSkills .secSkills div {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+article#artSkills .secSkills div img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+article#artSkills .secSkills div span {
+  font-weight: 600;
+}
+article#artExperiences .experContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+article#artExperiences .experContainer section {
+  flex: 1 1 375px;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+article#artExperiences .experContainer section p.expYears {
+  color: #2980B9;
+}
+article#artExperiences .experContainer section h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+article#artContact .contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+article#artContact .contactContainer section {
+  flex: 1 1 350px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+article#artContact .contactContainer section i {
+  background-color: #2980B9;
+  color: white;
+}
+article#artContact .contactContainer section h4 {
+  color: #333;
+}
+article#artContact .contactContainer section:last-child p {
+  text-transform: lowercase;
+}
+
+@media screen and (min-width: 450px) {
+  .container header {
+    flex: 0 0 340px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 110%;
+  }
+
+  .container {
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5.5rem 7rem;
+    max-width: 1750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container header,
+.container main {
+    border-radius: initial;
+  }
+  .container header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.2rem;
+    border-right: 2px solid #333;
+  }
+}/*# sourceMappingURL=style.css.map */

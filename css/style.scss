@@ -1,0 +1,167 @@
+@import "_variables"; 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // transition: all 0.5s;
+}
+
+html {
+  font-size: 90%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  background: linear-gradient(to top,$blue, $darckBlue );
+}
+.container {
+  width: 100%;
+  padding: 1rem;
+  @include dispFlex;
+  justify-content: center;
+  
+  header,
+  main {
+    background-color: $white;
+    padding: $boxesPadding;
+    border-radius: $borderRadius;
+  }
+  @import "header";
+
+}// End .container
+.container main {
+  flex: 1 1 832px;
+  color: $gray;
+}
+article {
+  margin-bottom: 1.5rem;
+  h2 {
+    color: $blue;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &#artAbout {
+    > p {
+      font-size: 1rem;
+      margin-bottom: .6rem;
+      text-transform: lowercase;
+      text-indent: $indent;
+      &::first-letter{
+        text-transform: uppercase;
+      }
+    }
+    section.persoInfos {
+      @include dispFlex;
+      margin-top: 1rem;
+      aside {
+        flex: 1 1 320px;
+        p {
+          font-weight: 500;
+          margin-bottom: .6rem;
+          span {
+            color: $blackLight;
+          }
+        }
+        &.p1 p:nth-child(4) span {
+          text-transform:lowercase;
+        }
+      }
+      
+    }
+  } // End #artAbout
+  &#artSkills .secSkills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 130px);
+    gap: $gap;
+    div {
+      background-color: $grayLight;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5px;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+  }// End .secSkills
+
+  &#artExperiences {
+    .experContainer {
+      @include dispFlex;
+      section {
+        flex: 1 1 375px;
+        background-color: $grayLight;
+        border-radius: 10px;
+        padding: $boxesPadding;
+        p.expYears {
+          color: $blue;
+        }
+        h3 {
+          margin-top: 8px ;
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: $blackLight;
+        }
+      }
+    }
+  }
+  &#artContact .contactContainer {
+    @include dispFlex;
+    justify-content: space-between;
+    section {
+      flex: 1 1 350px;
+      margin-bottom: $gap;
+      @include dispFlex;
+      i {
+        @extend .socialLinks;
+        background-color: $blue;
+        color: $white;
+      }
+      h4 {
+        color: $blackLight;
+      }
+      &:last-child p {
+        text-transform:lowercase;
+      }
+    }
+  }
+} // End article
+
+
+@media screen and (min-width: 450px) {
+  .container {
+    header {
+      flex: 0 0 340px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 110%;
+  }
+  .container {
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: center;
+    align-items: flex-start;
+    padding: $boxesPaddingWide;
+    max-width:1750px;
+    margin-left: auto;
+    margin-right: auto;
+
+    header,
+    main {
+      border-radius: initial;
+    }
+    header {
+      position: sticky;
+      top: $boxesPadding;
+      border-right: 2px solid $blackLight;
+    }
+  }
+}
